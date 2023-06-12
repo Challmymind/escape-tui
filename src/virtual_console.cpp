@@ -1,5 +1,5 @@
-#include <virtual_console.hpp>
-#include <console_mode.hpp>
+#include <escape-tui/virtual_console.hpp>
+#include <escape-tui/console_mode.hpp>
 #include <cstdio>
 
 

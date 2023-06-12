@@ -1,4 +1,4 @@
-#include <console_input.hpp>
+#include <escape-tui/console_input.hpp>
 #include <cstdio>
 
 namespace escape_tui {

@@ -1,4 +1,4 @@
-#include <console_mode.hpp>
+#include <escape-tui/console_mode.hpp>
 #include <termios.h>
 #include <unistd.h>
 #include <cstdlib>
