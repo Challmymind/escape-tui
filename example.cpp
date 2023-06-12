@@ -1,5 +1,4 @@
-#include <virtual_console.hpp>
-#include <console_input.hpp>
+#include <escape-tui.hpp>
 #include <cstdio>
 
 int main() {
