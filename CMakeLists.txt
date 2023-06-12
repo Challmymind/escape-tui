@@ -31,4 +31,4 @@ target_sources(${PROJECT_NAME} PRIVATE ${ESCAPE_TUI_SOURCE})
 target_include_directories(${PROJECT_NAME} PUBLIC inc)
 
 # Link pthread library to library.
-target_link_libraries({PROJECT_NAME} PRIVATE pthread)
+target_link_libraries(${PROJECT_NAME} PRIVATE pthread)
