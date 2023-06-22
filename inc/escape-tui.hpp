@@ -3,7 +3,6 @@
 
 /* Defines all includes for library escape-tui.
  * */
-#include <escape-tui/virtual_console.hpp>
-#include <escape-tui/console_input.hpp>
+#include "escape-tui/vconsole.hpp"
 
 #endif

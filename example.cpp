@@ -1,33 +1,30 @@
 #include <escape-tui.hpp>
 #include <cstdio>
 
+char msg[6] = "Hello";
+
 int main() {
 
-	escape_tui::VConsole console;
-	escape_tui::InputRecorder recorder;
+	escape_tui::VConsole console(10, 10);
+	
+	auto sc = console.get_screen();
+	auto ar_txt1 = sc.get_area(0, 0, 10, 1);
+	auto ar_txt2 = sc.get_area(0, 2, 10, 1);
 
-	recorder.start_recording();
-	char buffer[10];
-	std::uint_fast8_t index = 0;
+	ar_txt1.write(msg, 6);
+	ar_txt2.write(msg, 6);
+
 
 	while (true) {
+
+		sc.render();
 		
-		char symbol = recorder.get_input();
+		char symbol;
 
-		if (symbol) {
+		std::fscanf(stdin, "%c", &symbol);
 
-			if (index >= 10) index = 0;
-
-			buffer[index++] = symbol;
-
-			console.write_data(10, 0, buffer, index);
-
-		}
-
-
-		if(buffer[0] == 'a') break;
+		if (symbol == 'q') return 0;
 		
-		console.render();
 	}
 
 }

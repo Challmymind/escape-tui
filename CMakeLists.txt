@@ -10,7 +10,7 @@ project(
 	escape-tui
 
 	# Project version.
-	VERSION 0.0.1
+	VERSION 0.0.2
 
 	# Languges needed to build project.
 	LANGUAGES CXX C
@@ -32,3 +32,9 @@ target_include_directories(${PROJECT_NAME} PUBLIC inc)
 
 # Link pthread library to library.
 target_link_libraries(${PROJECT_NAME} PRIVATE pthread)
+
+# Build example.
+add_executable(example example.cpp)
+
+# Include library to executable.
+target_link_libraries(example PRIVATE escape-tui)
